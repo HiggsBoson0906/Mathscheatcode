@@ -12,20 +12,26 @@
   </head>
   
   <body>
-    <div id="poster">
-      <video id="rick" autoplay muted  loop>
-        <source src="assets/rickroll.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <h1>THAT SPECIAL MOMENT</h1>
-      <p>When you get rickrolled</p>
+    <div id="hui">
+      <p>I heard you got back huh?? chill i gotchu</p>
+      <p>Click anywhere to continue</p>
     </div>
-    <script>
-    document.addEventListener('click', function() {
-      var video = document.getElementById('rick');
-      video.muted = false;
-      video.play();
-    });
-  </script>
+<div id="poster" class="hidden">
+  <video id="rick" autoplay muted loop>
+    <source src="assets/rickroll.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <h1>THAT SPECIAL MOMENT</h1>
+  <p>When you get rickrolled</p>
+</div>
+<script>
+  document.addEventListener('click', function() {
+    document.getElementById('hui').classList.add('hidden');
+    var video = document.getElementById('rick');
+    video.muted = false;
+    video.play();
+    document.getElementById('poster').classList.remove('hidden');
+  });
+</script>
   </body>
   </html>
