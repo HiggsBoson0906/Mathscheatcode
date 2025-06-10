@@ -13,12 +13,19 @@
   
   <body>
     <div id="poster">
-      <video id="rick"autoplay loop>
+      <video id="rick" autoplay muted  loop>
         <source src="assets/rickroll.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
       <h1>THAT SPECIAL MOMENT</h1>
       <p>When you get rickrolled</p>
     </div>
+    <script>
+    document.addEventListener('click', function() {
+      var video = document.getElementById('rick');
+      video.muted = false;
+      video.play();
+    });
+  </script>
   </body>
   </html>
